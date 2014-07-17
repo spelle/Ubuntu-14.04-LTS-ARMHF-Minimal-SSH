@@ -1,3 +1,4 @@
 # Packages needed for A20-OLinuXino
+sudo
 isc-dhcp-client
 openssh-server
