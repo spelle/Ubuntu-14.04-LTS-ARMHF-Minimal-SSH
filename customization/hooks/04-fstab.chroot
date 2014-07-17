@@ -1,0 +1,7 @@
+echo "# /etc/fstab: static file system information." > /etc/fstab
+echo "#" >> /etc/fstab
+echo "# <file system> <mount point>   <type>  <options>       <dump>  <pass>" >> /etc/fstab
+echo "/dev/root      /               ext4     noatime,errors=remount-ro 0 1" >> /etc/fstab
+echo "tmpfs          /run/shm        tmpfs    defaults                  0 0" >> /etc/fstab
+echo "tmpfs          /tmp            tmpfs    defaults                  0 0" >> /etc/fstab
+echo "tmpfs          /var/tmp        tmpfs    defaults                  0 0" >> /etc/fstab

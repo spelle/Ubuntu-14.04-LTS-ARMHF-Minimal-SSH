@@ -1,0 +1,7 @@
+#!/bin/sh  
+
+echo "I: create olimex user"
+adduser --gecos olimex --disabled-login olimex
+
+echo "I: set olimex user password"
+echo "olimex:olimex" | chpasswd

@@ -1,0 +1,3 @@
+# Packages needed for A20-OLinuXino
+isc-dhcp-client
+openssh-server

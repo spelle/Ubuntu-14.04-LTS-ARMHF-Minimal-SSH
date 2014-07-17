@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# (C) 2012-2014 Fathi Boudra <fathi.boudra@linaro.org>
+
+# Create configuration for live-build.
+
+# You need live-build package installed.
+
+set -e
+
+echo "I: create configuration"
+export LB_BOOTSTRAP_INCLUDE="apt-transport-https gnupg"
+lb config \
+ --apt-indices none \
+ --apt-secure false \
+ --architectures armhf \
+ --archive-areas 'main universe' \
+ --binary-filesystem ext3 \
+ --binary-images tar \
+ --bootappend-live "hostname=a20-olinuxino username=olimex" \
+ --bootstrap-qemu-arch armhf \
+ --bootstrap-qemu-static /usr/bin/qemu-arm-static \
+ --cache false \
+ --chroot-filesystem none \
+ --compression gzip \
+ --bootstrap-flavour minimal \
+ --distribution trusty \
+ --gzip-options '-9 --rsyncable' \
+ --iso-publisher 'Me Myself and I' \
+ --iso-volume 'ARMHF Ubuntu 14.04' \
+ --linux-flavours none \
+ --linux-packages none \
+ --mode ubuntu \
+ --security false \
+ --system normal
+# --mirror-bootstrap "http://localhost:3142/ports.ubuntu.com/ubuntu-ports/" \
+# --debootstrap-options "--variant=minbase" \
+# --updates false
+
+#echo "I: copy customization"
+#cp -rf customization/* config /
+
+echo "I: copy customization"
+cp -rf customization/* config/
+
+echo "I: done"
