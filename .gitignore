@@ -1,0 +1,6 @@
+.build
+cache
+chroot.headers
+chroot.packages.install
+chroot
+lb-build.log
