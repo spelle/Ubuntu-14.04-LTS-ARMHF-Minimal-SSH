@@ -2,3 +2,13 @@
 sudo
 isc-dhcp-client
 openssh-server
+zsh
+git
+aptitude
+vim
+wget
+curl
+ntpdate
+dialog
+fontconfig
+man

@@ -1,0 +1,6 @@
+cat << EOF > /etc/cron.daily/ntpdate
+#!/bin/sh
+ntpdate ntp.ubuntu.com
+EOF
+
+chmod 755 /etc/cron.daily/ntpdate
